@@ -13,7 +13,7 @@ import java.io.Serializable;
  *
  * @author evaja
  */
-public class jugador {
+public class jugador implements Serializable{
     private String nombre;
     private String correo;
     private String pais;
@@ -21,10 +21,10 @@ public class jugador {
     private String contraseña;
     private int saldo;
     private ArrayList<carro> carros = new ArrayList<>();
-    
 
     public jugador() {
     }
+    
 
     public jugador(String nombre, String correo, String pais, Date nacimiento, String contraseña,int saldo) {
         this.nombre = nombre;
@@ -100,6 +100,6 @@ public class jugador {
 
     @Override
     public String toString() {
-        return  nombre  ;
+        return  nombre +contraseña+pais+nacimiento+saldo;
     }
 }
