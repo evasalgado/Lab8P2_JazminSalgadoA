@@ -7,6 +7,7 @@ package lab8p2_jazminsalgadoa;
 import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.JOptionPane;
+import java.io.Serializable;
 
 /**
  *

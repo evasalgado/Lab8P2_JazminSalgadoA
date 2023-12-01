@@ -12,12 +12,13 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import javax.swing.JProgressBar;
+import java.io.Serializable;
 
 /**
  *
  * @author evaja
  */
-public class AdministrarInicioSesion extends Thread {
+public class AdministrarInicioSesion extends Thread implements Serializable{
 
     private ArrayList<jugador> listJ = new ArrayList<>();
     private File f = null;
@@ -100,14 +101,15 @@ public class AdministrarInicioSesion extends Thread {
         }
     }
 
-    public void cargar() {
+    public void cargar(){
         try {
-            listJ = new ArrayList<>();
+            listJ = new ArrayList();
             jugador temp;
             if (f.exists()) {
                 FileInputStream entrada
                         = new FileInputStream(f);
-                ObjectInputStream objeto = new ObjectInputStream(entrada);
+                ObjectInputStream objeto = 
+                        new ObjectInputStream(entrada);
                 try {
                     while ((temp = (jugador) objeto.readObject()) != null) {
                         listJ.add(temp);

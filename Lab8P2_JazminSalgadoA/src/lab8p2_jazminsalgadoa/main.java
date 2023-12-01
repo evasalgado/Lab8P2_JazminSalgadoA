@@ -5,16 +5,25 @@
 package lab8p2_jazminsalgadoa;
 
 import java.awt.Color;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.Year;
+import java.time.YearMonth;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
 import javax.swing.JColorChooser;
+import javax.swing.JOptionPane;
+import java.io.Serializable;
 
 /**
  *
  * @author evaja
  */
-public class main extends javax.swing.JFrame {
+public class main extends javax.swing.JFrame implements Serializable{
 
     /**
      * Creates new form main
@@ -25,7 +34,6 @@ public class main extends javax.swing.JFrame {
         pn_iniciarsesion.setVisible(false);
         pn_menuuser.setVisible(false);
         bt_salir.setVisible(false);
-        
 
     }
 
@@ -65,6 +73,7 @@ public class main extends javax.swing.JFrame {
         bt_menucarro1 = new javax.swing.JButton();
         bt_iniciosesion = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
+        tf_yearborn = new javax.swing.JTextField();
         bt_salir = new javax.swing.JButton();
         pn_admin = new javax.swing.JPanel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -276,17 +285,22 @@ public class main extends javax.swing.JFrame {
         pn_registro.setLayout(pn_registroLayout);
         pn_registroLayout.setHorizontalGroup(
             pn_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_registroLayout.createSequentialGroup()
+            .addGroup(pn_registroLayout.createSequentialGroup()
                 .addGap(183, 183, 183)
                 .addGroup(pn_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pn_registroLayout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(304, 304, 304))
+                        .addComponent(tf_yearborn, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(pn_registroLayout.createSequentialGroup()
-                        .addComponent(bt_iniciosesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(132, 132, 132)
-                        .addComponent(bt_menucarro1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(243, 243, 243))
+                        .addGroup(pn_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pn_registroLayout.createSequentialGroup()
+                                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(304, 304, 304))
+                            .addGroup(pn_registroLayout.createSequentialGroup()
+                                .addComponent(bt_iniciosesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(132, 132, 132)
+                                .addComponent(bt_menucarro1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(243, 243, 243))))
             .addGroup(pn_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pn_registroLayout.createSequentialGroup()
                     .addGap(179, 179, 179)
@@ -337,7 +351,9 @@ public class main extends javax.swing.JFrame {
         pn_registroLayout.setVerticalGroup(
             pn_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_registroLayout.createSequentialGroup()
-                .addContainerGap(468, Short.MAX_VALUE)
+                .addContainerGap(323, Short.MAX_VALUE)
+                .addComponent(tf_yearborn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(107, 107, 107)
                 .addComponent(jLabel8)
                 .addGap(14, 14, 14)
                 .addGroup(pn_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -710,7 +726,30 @@ public class main extends javax.swing.JFrame {
     }//GEN-LAST:event_pf_pswdregistroMouseClicked
 
     private void bt_registrarseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_registrarseMouseClicked
-
+        String user = tf_nombredeusuario.getText(),
+                mail = tf_correo.getText(),
+                pais = tf_paisdeorigen.getText(),
+                pswrd = pf_pswdregistro.getText(),
+                borndate = tf_yearborn.getText();
+        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        Date d = new Date();
+        try {
+            d = df.parse(borndate);
+        } catch (ParseException ex) {
+            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        AdministrarInicioSesion ai = new AdministrarInicioSesion("./users.usr");
+        ai.cargar();
+        ai.getListJ().add(new jugador(user, mail, pais, d, pswrd, 100000));
+        ai.escribir();
+        JOptionPane.showMessageDialog(this, "Usuario agregado");
+        tf_nombredeusuario.setText("");
+        tf_correo.setText("");
+        tf_paisdeorigen.setText("");
+        pf_pswdregistro.setText("******");
+        tf_yearborn.setText("");
+        pn_registro.setVisible(false);
+        pn_iniciarsesion.setVisible(false);
     }//GEN-LAST:event_bt_registrarseMouseClicked
 
     private void bt_menucarro1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_menucarro1MouseClicked
@@ -718,11 +757,17 @@ public class main extends javax.swing.JFrame {
         bt_salir.setVisible(true);
         pn_registro.setVisible(false);
         pn_iniciarsesion.setVisible(false);
-        
+
     }//GEN-LAST:event_bt_menucarro1MouseClicked
 
     private void bt_iniciosesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_iniciosesionMouseClicked
-
+        pn_iniciarsesion.setVisible(true);
+        pn_admin.setVisible(false);
+        pn_registro.setVisible(false);
+        AdministrarInicioSesion ai = new AdministrarInicioSesion("./users.usr");
+        ai.cargar();
+        DefaultComboBoxModel m = new DefaultComboBoxModel(ai.getListJ().toArray());
+        cb_users.setModel(m);
     }//GEN-LAST:event_bt_iniciosesionMouseClicked
 
     private void pf_iniciosesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pf_iniciosesionMouseClicked
@@ -1087,6 +1132,7 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JTextField tf_nombredeusuario;
     private javax.swing.JTextField tf_paisdeorigen;
     private javax.swing.JTextField tf_precio;
+    private javax.swing.JTextField tf_yearborn;
     private com.toedter.calendar.JYearChooser y_year;
     // End of variables declaration//GEN-END:variables
 }
