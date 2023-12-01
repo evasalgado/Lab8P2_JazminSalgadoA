@@ -23,7 +23,7 @@ import java.io.Serializable;
  *
  * @author evaja
  */
-public class main extends javax.swing.JFrame implements Serializable{
+public class main extends javax.swing.JFrame implements Serializable {
 
     /**
      * Creates new form main
@@ -76,7 +76,13 @@ public class main extends javax.swing.JFrame implements Serializable{
         tf_yearborn = new javax.swing.JTextField();
         bt_salir = new javax.swing.JButton();
         pn_admin = new javax.swing.JPanel();
-        jTabbedPane2 = new javax.swing.JTabbedPane();
+        tab_admin = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        tf_nombrec = new javax.swing.JTextField();
+        tf_locc = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        bt_agregacons = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         cb_pais = new javax.swing.JComboBox<>();
@@ -399,6 +405,65 @@ public class main extends javax.swing.JFrame implements Serializable{
         });
         getContentPane().add(bt_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, 100, -1));
 
+        tab_admin.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                tab_adminStateChanged(evt);
+            }
+        });
+
+        jLabel23.setText("Locación:");
+
+        jLabel24.setText("Nombre de La concesionaria:");
+
+        bt_agregacons.setText("Agregar concesionaria");
+        bt_agregacons.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_agregaconsMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(79, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(36, 36, 36)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_locc, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tf_nombrec, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(139, 139, 139))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(bt_agregacons, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(182, 182, 182))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(tf_nombrec, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(56, 56, 56))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_locc, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
+                .addComponent(bt_agregacons, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(68, 68, 68))
+        );
+
+        tab_admin.addTab("Agregar Concesionaria", jPanel1);
+
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel10.setText("Pais de Origen: ");
@@ -473,7 +538,7 @@ public class main extends javax.swing.JFrame implements Serializable{
         jPanel6.add(bt_agregarcarro, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 426, 250, 27));
         jPanel6.add(y_year, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, -1));
 
-        jTabbedPane2.addTab("Agregar Carro", jPanel6);
+        tab_admin.addTab("Agregar Carro", jPanel6);
 
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel7.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 93, 109, 37));
@@ -492,7 +557,7 @@ public class main extends javax.swing.JFrame implements Serializable{
         bt_agregarcircuito.setText("Agregar");
         jPanel7.add(bt_agregarcircuito, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, 130, 50));
 
-        jTabbedPane2.addTab("Agregar Circuito", jPanel7);
+        tab_admin.addTab("Agregar Circuito", jPanel7);
 
         javax.swing.GroupLayout pn_adminLayout = new javax.swing.GroupLayout(pn_admin);
         pn_admin.setLayout(pn_adminLayout);
@@ -500,14 +565,14 @@ public class main extends javax.swing.JFrame implements Serializable{
             pn_adminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pn_adminLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane2)
+                .addComponent(tab_admin)
                 .addContainerGap())
         );
         pn_adminLayout.setVerticalGroup(
             pn_adminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pn_adminLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane2)
+                .addComponent(tab_admin)
                 .addContainerGap())
         );
 
@@ -765,7 +830,15 @@ public class main extends javax.swing.JFrame implements Serializable{
         bt_salir.setVisible(true);
         pn_registro.setVisible(false);
         pn_iniciarsesion.setVisible(false);
-        DefaultComboBoxModel cb = (DefaultComboBoxModel) cb_pais.getModel();
+        DefaultComboBoxModel m = (DefaultComboBoxModel) cb_pais.getModel();
+        m.addElement("Japon");
+        m.addElement("Italia");
+        m.addElement("USA");
+        m.addElement("Alemania");
+        m.addElement("Francia");
+        m.addElement("UK");
+        m.addElement("Sweden");
+        cb_pais.setModel(m);
 
     }//GEN-LAST:event_bt_menucarro1MouseClicked
 
@@ -792,7 +865,19 @@ public class main extends javax.swing.JFrame implements Serializable{
     }//GEN-LAST:event_bt_registrarMouseClicked
 
     private void bt_menucarroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_menucarroMouseClicked
-
+        pn_admin.setVisible(true);
+        bt_salir.setVisible(true);
+        pn_registro.setVisible(false);
+        pn_iniciarsesion.setVisible(false);
+        DefaultComboBoxModel m = (DefaultComboBoxModel) cb_pais.getModel();
+        m.addElement("Japon");
+        m.addElement("Italia");
+        m.addElement("USA");
+        m.addElement("Alemania");
+        m.addElement("Francia");
+        m.addElement("UK");
+        m.addElement("Sweden");
+        cb_pais.setModel(m);
     }//GEN-LAST:event_bt_menucarroMouseClicked
 
     private void cb_paisItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_paisItemStateChanged
@@ -1027,6 +1112,26 @@ public class main extends javax.swing.JFrame implements Serializable{
         bt_salir.setVisible(false);
     }//GEN-LAST:event_bt_salirMouseClicked
 
+    private void bt_agregaconsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregaconsMouseClicked
+        String cn = tf_nombrec.getText(), cl = tf_locc.getText();
+
+        AdministrarConcesionaria ad = new AdministrarConcesionaria("./concesionarias.cns");
+        ad.cargar();
+        ad.getListC().add(new concesionaria(cn, cl));
+        ad.escribir();
+        JOptionPane.showMessageDialog(this, "Concesionaria agregada");
+    }//GEN-LAST:event_bt_agregaconsMouseClicked
+
+    private void tab_adminStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_tab_adminStateChanged
+        if (tab_admin.getSelectedIndex() == 1) {
+            AdministrarConcesionaria ac = new AdministrarConcesionaria("./concesionarias.cns");
+            ac.cargar();
+            DefaultComboBoxModel mc = new DefaultComboBoxModel(ac.getListC().toArray());
+            cb_agregarconc.setModel(mc);
+        } 
+
+    }//GEN-LAST:event_tab_adminStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -1061,8 +1166,9 @@ public class main extends javax.swing.JFrame implements Serializable{
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bt_agregacons;
     private javax.swing.JButton bt_agregarcarro;
     private javax.swing.JButton bt_agregarcircuito;
     private javax.swing.JButton bt_color;
@@ -1100,6 +1206,8 @@ public class main extends javax.swing.JFrame implements Serializable{
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1108,6 +1216,7 @@ public class main extends javax.swing.JFrame implements Serializable{
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1122,7 +1231,6 @@ public class main extends javax.swing.JFrame implements Serializable{
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
@@ -1139,7 +1247,10 @@ public class main extends javax.swing.JFrame implements Serializable{
     private javax.swing.JPanel pn_registro;
     private javax.swing.JRadioButton rb_agencia;
     private javax.swing.JRadioButton rb_reconstruido;
+    private javax.swing.JTabbedPane tab_admin;
     private javax.swing.JTextField tf_correo;
+    private javax.swing.JTextField tf_locc;
+    private javax.swing.JTextField tf_nombrec;
     private javax.swing.JTextField tf_nombredeusuario;
     private javax.swing.JTextField tf_paisdeorigen;
     private javax.swing.JTextField tf_precio;

@@ -10,13 +10,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author evaja
  */
-public class AdministrarConcesionaria {
+public class AdministrarConcesionaria implements Serializable{
 
     private ArrayList<concesionaria> listC = new ArrayList();
     private File archivo = null;

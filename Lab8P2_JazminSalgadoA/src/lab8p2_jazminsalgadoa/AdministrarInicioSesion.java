@@ -13,6 +13,7 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import javax.swing.JProgressBar;
 import java.io.Serializable;
+import java.io.WriteAbortedException;
 
 /**
  *

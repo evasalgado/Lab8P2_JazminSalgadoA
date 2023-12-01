@@ -4,14 +4,15 @@
  */
 package lab8p2_jazminsalgadoa;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author evaja
  */
-public class concesionaria {
-     private String nombre;
+public class concesionaria implements Serializable{
+    private String nombre;
     private String locacion;
     private ArrayList<carro> carrosventa = new ArrayList<>();
 
