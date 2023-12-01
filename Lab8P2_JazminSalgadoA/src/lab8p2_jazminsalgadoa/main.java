@@ -4,6 +4,12 @@
  */
 package lab8p2_jazminsalgadoa;
 
+import java.awt.Color;
+import java.util.Date;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.DefaultListModel;
+import javax.swing.JColorChooser;
+
 /**
  *
  * @author evaja
@@ -26,93 +32,903 @@ public class main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        pn_iniciarsesion = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        cb_users = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
+        pf_iniciosesion = new javax.swing.JPasswordField();
+        bt_iniciarsesion = new javax.swing.JButton();
+        bt_registrar = new javax.swing.JButton();
+        bt_menucarro = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jProgressBar1 = new javax.swing.JProgressBar();
+        jLabel11 = new javax.swing.JLabel();
+        pn_registro = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        tf_nombredeusuario = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        tf_correo = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        tf_paisdeorigen = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        pf_pswdregistro = new javax.swing.JPasswordField();
+        jLabel9 = new javax.swing.JLabel();
+        bt_registrarse = new javax.swing.JButton();
+        bt_menucarro1 = new javax.swing.JButton();
+        bt_iniciosesion = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        pn_admin = new javax.swing.JPanel();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        cb_pais = new javax.swing.JComboBox<>();
+        cb_marca = new javax.swing.JComboBox<>();
+        cb_modelo = new javax.swing.JComboBox<>();
+        jLabel13 = new javax.swing.JLabel();
+        bt_color = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        rb_reconstruido = new javax.swing.JRadioButton();
+        rb_agencia = new javax.swing.JRadioButton();
+        jLabel16 = new javax.swing.JLabel();
+        cb_agregarconc = new javax.swing.JComboBox<>();
+        tf_precio = new javax.swing.JTextField();
+        bt_agregarcarro = new javax.swing.JButton();
+        y_year = new com.toedter.calendar.JYearChooser();
+        jPanel7 = new javax.swing.JPanel();
+        pn_menuuser = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel4 = new javax.swing.JPanel();
+        cb_concesionariacompra = new javax.swing.JComboBox<>();
+        bt_comprarcarro = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
         jPanel5 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jProgressBar5 = new javax.swing.JProgressBar();
         jPanel2 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        l_eliminar1 = new javax.swing.JList<>();
+        bt_eliminar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
+        cb_carro1 = new javax.swing.JComboBox<>();
+        cb_carro2 = new javax.swing.JComboBox<>();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jProgressBar2 = new javax.swing.JProgressBar();
+        jProgressBar3 = new javax.swing.JProgressBar();
+        jProgressBar4 = new javax.swing.JProgressBar();
+        jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Inicio de Sesion: \n");
+
+        jLabel2.setText("Nombre de Usuario");
+
+        jLabel3.setText("Contraseña");
+
+        pf_iniciosesion.setText("jPasswordField1");
+        pf_iniciosesion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pf_iniciosesionMouseClicked(evt);
+            }
+        });
+
+        bt_iniciarsesion.setText("Iniciar Sesion");
+        bt_iniciarsesion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_iniciarsesionMouseClicked(evt);
+            }
+        });
+
+        bt_registrar.setText("Registrarse");
+        bt_registrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_registrarMouseClicked(evt);
+            }
+        });
+
+        bt_menucarro.setText("Entra como administrador");
+        bt_menucarro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_menucarroMouseClicked(evt);
+            }
+        });
+
+        jLabel4.setText("O mejor desea: ");
+
+        jLabel11.setText("Buscando Usuario");
+
+        javax.swing.GroupLayout pn_iniciarsesionLayout = new javax.swing.GroupLayout(pn_iniciarsesion);
+        pn_iniciarsesion.setLayout(pn_iniciarsesionLayout);
+        pn_iniciarsesionLayout.setHorizontalGroup(
+            pn_iniciarsesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pn_iniciarsesionLayout.createSequentialGroup()
+                .addGap(248, 248, 248)
+                .addGroup(pn_iniciarsesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pn_iniciarsesionLayout.createSequentialGroup()
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(pn_iniciarsesionLayout.createSequentialGroup()
+                        .addGroup(pn_iniciarsesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(pn_iniciarsesionLayout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(25, 25, 25))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pn_iniciarsesionLayout.createSequentialGroup()
+                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(183, 183, 183))
+                            .addGroup(pn_iniciarsesionLayout.createSequentialGroup()
+                                .addComponent(bt_registrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(44, 44, 44)
+                                .addComponent(bt_menucarro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(cb_users, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pn_iniciarsesionLayout.createSequentialGroup()
+                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(183, 183, 183))
+                            .addComponent(pf_iniciosesion, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pn_iniciarsesionLayout.createSequentialGroup()
+                                .addGap(99, 99, 99)
+                                .addGroup(pn_iniciarsesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(bt_iniciarsesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(101, 101, 101)))
+                        .addGap(272, 272, 272))))
+        );
+        pn_iniciarsesionLayout.setVerticalGroup(
+            pn_iniciarsesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pn_iniciarsesionLayout.createSequentialGroup()
+                .addGap(57, 57, 57)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addGap(3, 3, 3)
+                .addComponent(cb_users, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(pf_iniciosesion, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(8, 8, 8)
+                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addComponent(bt_iniciarsesion)
+                .addGap(10, 10, 10)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pn_iniciarsesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bt_registrar)
+                    .addComponent(bt_menucarro))
+                .addGap(82, 82, 82))
+        );
+
+        getContentPane().add(pn_iniciarsesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 540));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Registrarse");
+
+        jLabel6.setText("Nombre de Usuario");
+
+        jLabel7.setText("Correo");
+
+        jLabel18.setText("Pais de Origen");
+
+        jLabel17.setText("Contraseña");
+
+        pf_pswdregistro.setText("jPasswordField1");
+        pf_pswdregistro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pf_pswdregistroMouseClicked(evt);
+            }
+        });
+
+        jLabel9.setText("Fecha de Nacimiento");
+
+        bt_registrarse.setText("Registrarse");
+        bt_registrarse.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_registrarseMouseClicked(evt);
+            }
+        });
+
+        bt_menucarro1.setText("Entrar como administrador");
+        bt_menucarro1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_menucarro1MouseClicked(evt);
+            }
+        });
+
+        bt_iniciosesion.setText("Iniciar Sesion");
+        bt_iniciosesion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_iniciosesionMouseClicked(evt);
+            }
+        });
+
+        jLabel8.setText("O mejor desea: ");
+
+        javax.swing.GroupLayout pn_registroLayout = new javax.swing.GroupLayout(pn_registro);
+        pn_registro.setLayout(pn_registroLayout);
+        pn_registroLayout.setHorizontalGroup(
+            pn_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_registroLayout.createSequentialGroup()
+                .addGap(183, 183, 183)
+                .addGroup(pn_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pn_registroLayout.createSequentialGroup()
+                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(304, 304, 304))
+                    .addGroup(pn_registroLayout.createSequentialGroup()
+                        .addComponent(bt_iniciosesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(132, 132, 132)
+                        .addComponent(bt_menucarro1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(243, 243, 243))
+            .addGroup(pn_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pn_registroLayout.createSequentialGroup()
+                    .addGap(179, 179, 179)
+                    .addGroup(pn_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pn_registroLayout.createSequentialGroup()
+                            .addGap(18, 18, 18)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGap(209, 209, 209))
+                        .addGroup(pn_registroLayout.createSequentialGroup()
+                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGap(355, 355, 355))
+                        .addGroup(pn_registroLayout.createSequentialGroup()
+                            .addComponent(tf_nombredeusuario)
+                            .addGap(1, 1, 1))
+                        .addGroup(pn_registroLayout.createSequentialGroup()
+                            .addGap(1, 1, 1)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGap(354, 354, 354))
+                        .addGroup(pn_registroLayout.createSequentialGroup()
+                            .addGap(1, 1, 1)
+                            .addComponent(tf_correo)
+                            .addGap(1, 1, 1))
+                        .addGroup(pn_registroLayout.createSequentialGroup()
+                            .addGap(1, 1, 1)
+                            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGap(354, 354, 354))
+                        .addGroup(pn_registroLayout.createSequentialGroup()
+                            .addGap(1, 1, 1)
+                            .addComponent(tf_paisdeorigen)
+                            .addGap(1, 1, 1))
+                        .addGroup(pn_registroLayout.createSequentialGroup()
+                            .addGap(1, 1, 1)
+                            .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGap(354, 354, 354))
+                        .addGroup(pn_registroLayout.createSequentialGroup()
+                            .addGap(1, 1, 1)
+                            .addComponent(pf_pswdregistro))
+                        .addGroup(pn_registroLayout.createSequentialGroup()
+                            .addGap(1, 1, 1)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+                            .addGap(354, 354, 354))
+                        .addGroup(pn_registroLayout.createSequentialGroup()
+                            .addGap(1, 1, 1)
+                            .addComponent(bt_registrarse, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGap(272, 272, 272)))
+                    .addGap(179, 179, 179)))
+        );
+        pn_registroLayout.setVerticalGroup(
+            pn_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_registroLayout.createSequentialGroup()
+                .addContainerGap(468, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addGap(14, 14, 14)
+                .addGroup(pn_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bt_iniciosesion)
+                    .addComponent(bt_menucarro1))
+                .addGap(19, 19, 19))
+            .addGroup(pn_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pn_registroLayout.createSequentialGroup()
+                    .addGap(0, 7, Short.MAX_VALUE)
+                    .addComponent(jLabel5)
+                    .addGap(18, 18, 18)
+                    .addComponent(jLabel6)
+                    .addGap(6, 6, 6)
+                    .addComponent(tf_nombredeusuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(13, 13, 13)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(6, 6, 6)
+                    .addComponent(tf_correo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(8, 8, 8)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(6, 6, 6)
+                    .addComponent(tf_paisdeorigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(8, 8, 8)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(16, 16, 16)
+                    .addComponent(pf_pswdregistro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(8, 8, 8)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(66, 66, 66)
+                    .addComponent(bt_registrarse, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 90, Short.MAX_VALUE)))
+        );
+
+        getContentPane().add(pn_registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 540));
+
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel10.setText("Pais de Origen: ");
+        jPanel6.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 25, 190, 32));
+
+        cb_pais.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cb_paisItemStateChanged(evt);
+            }
+        });
+        jPanel6.add(cb_pais, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 67, 126, 47));
+
+        cb_marca.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cb_marcaItemStateChanged(evt);
+            }
+        });
+        jPanel6.add(cb_marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 148, 126, 47));
+
+        cb_modelo.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cb_modeloItemStateChanged(evt);
+            }
+        });
+        jPanel6.add(cb_modelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 154, 28));
+
+        jLabel13.setText("Color: ");
+        jPanel6.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 33, 143, -1));
+
+        bt_color.setBackground(new java.awt.Color(0, 51, 153));
+        bt_color.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_colorMouseClicked(evt);
+            }
+        });
+        jPanel6.add(bt_color, new org.netbeans.lib.awtextra.AbsoluteConstraints(468, 25, -1, 36));
+
+        jLabel14.setText("Año:");
+        jPanel6.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 67, 172, 35));
+
+        jLabel15.setText("El carro es reconstruido o de agencia:");
+        jPanel6.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 286, -1));
+
+        rb_reconstruido.setText("Reconstruido");
+        rb_reconstruido.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rb_reconstruidoMouseClicked(evt);
+            }
+        });
+        jPanel6.add(rb_reconstruido, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 126, -1));
+
+        rb_agencia.setText("Agencia");
+        rb_agencia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rb_agenciaMouseClicked(evt);
+            }
+        });
+        jPanel6.add(rb_agencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, 99, -1));
+
+        jLabel16.setText("Concesionaria donde Lo consiguió: ");
+        jPanel6.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 243, 19));
+
+        jPanel6.add(cb_agregarconc, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 235, 243, 26));
+        jPanel6.add(tf_precio, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 71, -1));
+
+        bt_agregarcarro.setText("Agregar ");
+        bt_agregarcarro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_agregarcarroMouseClicked(evt);
+            }
+        });
+        jPanel6.add(bt_agregarcarro, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 426, 250, 27));
+        jPanel6.add(y_year, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, -1));
+
+        jTabbedPane2.addTab("Agregar Carro", jPanel6);
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 758, Short.MAX_VALUE)
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 453, Short.MAX_VALUE)
+        );
+
+        jTabbedPane2.addTab("Agregar Circuito", jPanel7);
+
+        javax.swing.GroupLayout pn_adminLayout = new javax.swing.GroupLayout(pn_admin);
+        pn_admin.setLayout(pn_adminLayout);
+        pn_adminLayout.setHorizontalGroup(
+            pn_adminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pn_adminLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane2)
+                .addContainerGap())
+        );
+        pn_adminLayout.setVerticalGroup(
+            pn_adminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pn_adminLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane2)
+                .addContainerGap())
+        );
+
+        getContentPane().add(pn_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 770, 480));
+
+        cb_concesionariacompra.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cb_concesionariacompraItemStateChanged(evt);
+            }
+        });
+
+        bt_comprarcarro.setText("Comprar");
+
+        jList1.setModel(new DefaultListModel<>()
+        );
+        jScrollPane1.setViewportView(jList1);
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 758, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(232, 232, 232)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(233, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bt_comprarcarro, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(250, 250, 250))
+            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(cb_concesionariacompra, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 437, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(bt_comprarcarro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
+            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGap(0, 8, Short.MAX_VALUE)
+                    .addComponent(cb_concesionariacompra, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 432, Short.MAX_VALUE)))
         );
 
-        jTabbedPane1.addTab("Vender carro", jPanel4);
+        jTabbedPane1.addTab("Comprar carro", jPanel4);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Tipo", "Marca", "Precio", "Tiempo"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 758, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(151, 151, 151)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(128, 128, 128)
+                        .addComponent(jProgressBar5, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(131, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 437, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jProgressBar5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Simulacion", jPanel5);
+        jTabbedPane1.addTab("Instalar Partes", jPanel5);
+
+        l_eliminar1.setModel(new DefaultListModel()
+        );
+        jScrollPane5.setViewportView(l_eliminar1);
+
+        bt_eliminar.setText("Eliminar");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 758, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 661, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(305, 305, 305)
+                        .addComponent(bt_eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 437, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(bt_eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Comprar carro", jPanel2);
+        jTabbedPane1.addTab("Vender Carro", jPanel2);
+
+        jLabel12.setText("Carro1");
+
+        jLabel19.setText("Carro2");
+
+        jButton2.setText("Simular");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 758, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jProgressBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cb_carro1, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(137, 137, 137)
+                        .addComponent(jProgressBar4, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(246, 246, 246)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(142, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(27, 27, 27)
+                    .addComponent(cb_carro2, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(469, Short.MAX_VALUE)))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 437, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel19))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cb_carro1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jProgressBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(46, 46, 46)
+                .addComponent(jProgressBar4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(71, 71, 71)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(105, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(40, 40, 40)
+                    .addComponent(cb_carro2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(389, Short.MAX_VALUE)))
         );
 
-        jTabbedPane1.addTab("Instalar Partes", jPanel3);
+        jTabbedPane1.addTab("Simulación", jPanel3);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pn_menuuserLayout = new javax.swing.GroupLayout(pn_menuuser);
+        pn_menuuser.setLayout(pn_menuuserLayout);
+        pn_menuuserLayout.setHorizontalGroup(
+            pn_menuuserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pn_menuuserLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        pn_menuuserLayout.setVerticalGroup(
+            pn_menuuserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pn_menuuserLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 770, 480));
+        getContentPane().add(pn_menuuser, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 770, 480));
 
         jButton1.setText("Agregar");
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, 100, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void pf_pswdregistroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pf_pswdregistroMouseClicked
+        pf_pswdregistro.setText("");
+    }//GEN-LAST:event_pf_pswdregistroMouseClicked
+
+    private void bt_registrarseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_registrarseMouseClicked
+      
+    }//GEN-LAST:event_bt_registrarseMouseClicked
+
+    private void bt_menucarro1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_menucarro1MouseClicked
+       
+    }//GEN-LAST:event_bt_menucarro1MouseClicked
+
+    private void bt_iniciosesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_iniciosesionMouseClicked
+       
+    }//GEN-LAST:event_bt_iniciosesionMouseClicked
+
+    private void pf_iniciosesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pf_iniciosesionMouseClicked
+        pf_iniciosesion.setText("");
+    }//GEN-LAST:event_pf_iniciosesionMouseClicked
+
+    private void bt_iniciarsesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_iniciarsesionMouseClicked
+        
+    }//GEN-LAST:event_bt_iniciarsesionMouseClicked
+
+    private void bt_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_registrarMouseClicked
+       
+    }//GEN-LAST:event_bt_registrarMouseClicked
+
+    private void bt_menucarroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_menucarroMouseClicked
+       
+    }//GEN-LAST:event_bt_menucarroMouseClicked
+
+    private void cb_paisItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_paisItemStateChanged
+        DefaultComboBoxModel m = (DefaultComboBoxModel) cb_marca.getModel();
+        if (evt.getStateChange() == 2) {
+            if (cb_pais.getSelectedIndex() == 0) {
+                m = new DefaultComboBoxModel();
+                m.addElement("Toyota");
+                m.addElement("Subaru");
+                m.addElement("Honda");
+                m.addElement("Mitsubishi");
+                m.addElement("Nissan");
+                cb_marca.setModel(m);
+            } else if (cb_pais.getSelectedIndex() == 1) {
+                m = new DefaultComboBoxModel();
+                m.addElement("Ferrari");
+                m.addElement("Lamborgini");
+
+                cb_marca.setModel(m);
+            } else if (cb_pais.getSelectedIndex() == 2) {
+                m = new DefaultComboBoxModel();
+                m.addElement("Ford");
+                m.addElement("Chevrolet");
+                m.addElement("ACORH");
+                cb_marca.setModel(m);
+            } else if (cb_pais.getSelectedIndex() == 3) {
+                m = new DefaultComboBoxModel();
+                m.addElement("BMW");
+                m.addElement("Mercedes-Benz");
+                m.addElement("VW");
+                m.addElement("Hudi");
+                m.addElement("Porsche");
+                cb_marca.setModel(m);
+            } else if (cb_pais.getSelectedIndex() == 4) {
+                m = new DefaultComboBoxModel();
+                m.addElement("Deugeot");
+                cb_marca.setModel(m);
+            } else if (cb_pais.getSelectedIndex() == 5) {
+                m = new DefaultComboBoxModel();
+                m.addElement("Mini Cooper");
+                m.addElement("CountryMan");
+                cb_marca.setModel(m);
+            }
+            if (cb_pais.getSelectedIndex() == 6) {
+                m = new DefaultComboBoxModel();
+                m.addElement("Volvo");
+                cb_marca.setModel(m);
+            }
+        }
+    }//GEN-LAST:event_cb_paisItemStateChanged
+
+    private void cb_marcaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_marcaItemStateChanged
+        DefaultComboBoxModel m = (DefaultComboBoxModel) cb_modelo.getModel();
+        if (evt.getStateChange() == 2) {
+            switch (cb_pais.getSelectedIndex()) {
+                case 0 -> {
+                    switch (cb_marca.getSelectedIndex()) {
+                        case 0 -> {
+                            m = new DefaultComboBoxModel();
+                            m.addElement("GT-86");
+                            m.addElement("Supra");
+
+                        }
+                        case 1 -> {
+                            m = new DefaultComboBoxModel();
+                            m.addElement("WPZ-X");
+                            m.addElement("Imprez");
+                            m.addElement("BRZ");
+                        }
+                        case 2 -> {
+                            m = new DefaultComboBoxModel();
+                            m.addElement("Civic");
+                            m.addElement("Type-R");
+                            m.addElement("Indgra");
+                            m.addElement("CR-X");
+                        }
+                        case 3 -> {
+                            m = new DefaultComboBoxModel();
+                            m.addElement("Lancer Evo");
+                            m.addElement("Mirage");
+                        }
+                        case 4 -> {
+                            m = new DefaultComboBoxModel();
+                            m.addElement("Skyline-GTR R32");
+                            m.addElement("Skyline-GTR R34");
+                            m.addElement("GTR-R35");
+                            m.addElement("2405X");
+                            m.addElement("350Z");
+                            m.addElement("370Z");
+                        }
+                        default -> {
+                        }
+                    }
+                }
+
+                case 1 -> {
+                    if (cb_marca.getSelectedIndex() == 0) {
+                        m = new DefaultComboBoxModel();
+                        m.addElement("La Ferrari");
+                        m.addElement("Testorroso");
+                        m.addElement("240");
+                    } else if (cb_marca.getSelectedIndex() == 1) {
+                        m = new DefaultComboBoxModel();
+                        m.addElement("Diablo");
+                        m.addElement("Huracan");
+                        m.addElement("Murcielago");
+                    }
+                }
+                case 2 -> {
+                    switch (cb_marca.getSelectedIndex()) {
+                        case 0:
+                        m = new DefaultComboBoxModel();
+                        m.addElement("Mustang");
+                        m.addElement("F-150");
+                        break;
+                        case 1:
+                        m = new DefaultComboBoxModel();
+                        m.addElement("Camara");
+                        m.addElement("Corvette");
+                        m.addElement("Bel-Hir");
+                        break;
+                        case 2:
+                        m = new DefaultComboBoxModel();
+                        m.addElement("NSX");
+                        break;
+                        default:
+                        break;
+                    }
+                }
+
+                case 3 -> {
+                    switch (cb_marca.getSelectedIndex()) {
+                        case 0:
+                        m = new DefaultComboBoxModel();
+                        m.addElement("M3");
+                        m.addElement("X6");
+                        m.addElement("M5");
+                        break;
+                        case 1:
+                        m = new DefaultComboBoxModel();
+                        m.addElement("Berlina 220 b");
+                        m.addElement("Mercedes Clase A");
+                        m.addElement("A AMG 35");
+                        break;
+                        case 2:
+                        m = new DefaultComboBoxModel();
+                        m.addElement("Beetle");
+                        m.addElement("¿Nordo Concept");
+                        break;
+                        default:
+                        break;
+                    }
+                    if (cb_marca.getSelectedIndex() == 3) {
+                        m = new DefaultComboBoxModel();
+                        m.addElement("R8");
+                        m.addElement("TT-Coupe");
+                    } else if (cb_marca.getSelectedIndex() == 4) {
+                        m = new DefaultComboBoxModel();
+                        m.addElement("911 Careso");
+                        m.addElement("978");
+                    }
+                }
+
+                case 4 -> {
+                    if (cb_marca.getSelectedIndex() == 0) {
+                        m = new DefaultComboBoxModel();
+                        m.addElement("206");
+                    }
+                }
+                case 5 -> {
+                    if (cb_marca.getSelectedIndex() == 0) {
+                        m = new DefaultComboBoxModel();
+                        m.addElement("MINI COUNTRYMAN Cooper Classic");
+                        m.addElement("MINI COUNTRYMAN Cooper Untamed");
+                        m.addElement("MINI COUNTRYMAN Cooper S Iconic");
+                        m.addElement("MINI COUNTRYMAN Cooper S Untamed ");
+                    } else if (cb_marca.getSelectedIndex() == 1) {
+                        m = new DefaultComboBoxModel();
+                        m.addElement("Cooper");
+                        m.addElement("Mini");
+                    }
+                }
+                case 6 -> {
+                    if (cb_marca.getSelectedIndex() == 0) {
+                        m = new DefaultComboBoxModel();
+                        m.addElement("EX30 4x4");
+                        m.addElement("C40 4x4");
+                        m.addElement("EX90 4x4");
+                        m.addElement("S60 Berlina");
+                    }
+                }
+                default ->
+                System.out.println("No valido");
+            }
+        }
+        cb_modelo.setModel(m);
+    }//GEN-LAST:event_cb_marcaItemStateChanged
+
+    private void cb_modeloItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_modeloItemStateChanged
+        if (evt.getStateChange() == 2) {
+            if (cb_modelo.getSelectedIndex() == 2) {
+                rb_reconstruido.setSelected(true);
+                rb_agencia.setEnabled(false);
+            }
+        }
+    }//GEN-LAST:event_cb_modeloItemStateChanged
+
+    private void bt_colorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_colorMouseClicked
+        bt_color.setBackground(JColorChooser.showDialog(this, "Agregue el color del carro", Color.yellow));
+    }//GEN-LAST:event_bt_colorMouseClicked
+
+    private void rb_reconstruidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rb_reconstruidoMouseClicked
+        rb_agencia.setSelected(false);
+    }//GEN-LAST:event_rb_reconstruidoMouseClicked
+
+    private void rb_agenciaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rb_agenciaMouseClicked
+        rb_reconstruido.setSelected(false);
+    }//GEN-LAST:event_rb_agenciaMouseClicked
+
+    private void bt_agregarcarroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregarcarroMouseClicked
+
+    }//GEN-LAST:event_bt_agregarcarroMouseClicked
+
+    private void cb_concesionariacompraItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_concesionariacompraItemStateChanged
+       
+    }//GEN-LAST:event_cb_concesionariacompraItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -150,12 +966,76 @@ public class main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bt_agregarcarro;
+    private javax.swing.JButton bt_color;
+    private javax.swing.JButton bt_comprarcarro;
+    private javax.swing.JButton bt_eliminar;
+    private javax.swing.JButton bt_iniciarsesion;
+    private javax.swing.JButton bt_iniciosesion;
+    private javax.swing.JButton bt_menucarro;
+    private javax.swing.JButton bt_menucarro1;
+    private javax.swing.JButton bt_registrar;
+    private javax.swing.JButton bt_registrarse;
+    private javax.swing.JComboBox<String> cb_agregarconc;
+    private javax.swing.JComboBox<String> cb_carro1;
+    private javax.swing.JComboBox<String> cb_carro2;
+    private javax.swing.JComboBox<String> cb_concesionariacompra;
+    private javax.swing.JComboBox<String> cb_marca;
+    private javax.swing.JComboBox<String> cb_modelo;
+    private javax.swing.JComboBox<String> cb_pais;
+    private javax.swing.JComboBox<String> cb_users;
     private javax.swing.JButton jButton1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JProgressBar jProgressBar2;
+    private javax.swing.JProgressBar jProgressBar3;
+    private javax.swing.JProgressBar jProgressBar4;
+    private javax.swing.JProgressBar jProgressBar5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JList<String> l_eliminar1;
+    private javax.swing.JPasswordField pf_iniciosesion;
+    private javax.swing.JPasswordField pf_pswdregistro;
+    private javax.swing.JPanel pn_admin;
+    private javax.swing.JPanel pn_iniciarsesion;
+    private javax.swing.JPanel pn_menuuser;
+    private javax.swing.JPanel pn_registro;
+    private javax.swing.JRadioButton rb_agencia;
+    private javax.swing.JRadioButton rb_reconstruido;
+    private javax.swing.JTextField tf_correo;
+    private javax.swing.JTextField tf_nombredeusuario;
+    private javax.swing.JTextField tf_paisdeorigen;
+    private javax.swing.JTextField tf_precio;
+    private com.toedter.calendar.JYearChooser y_year;
     // End of variables declaration//GEN-END:variables
 }
