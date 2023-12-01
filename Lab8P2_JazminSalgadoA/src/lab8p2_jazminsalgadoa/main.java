@@ -18,6 +18,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JColorChooser;
 import javax.swing.JOptionPane;
 import java.io.Serializable;
+import java.util.Random;
 
 /**
  *
@@ -99,6 +100,9 @@ public class main extends javax.swing.JFrame implements Serializable {
         tf_precio = new javax.swing.JTextField();
         bt_agregarcarro = new javax.swing.JButton();
         y_year = new com.toedter.calendar.JYearChooser();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
@@ -466,8 +470,8 @@ public class main extends javax.swing.JFrame implements Serializable {
 
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel10.setText("Pais de Origen: ");
-        jPanel6.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 25, 190, 32));
+        jLabel10.setText("Modelo");
+        jPanel6.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 160, 20));
 
         cb_pais.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -538,6 +542,15 @@ public class main extends javax.swing.JFrame implements Serializable {
         jPanel6.add(bt_agregarcarro, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 426, 250, 27));
         jPanel6.add(y_year, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, -1));
 
+        jLabel25.setText("Precio:");
+        jPanel6.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, 206, 40));
+
+        jLabel26.setText("Pais de Origen: ");
+        jPanel6.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 25, 190, 32));
+
+        jLabel27.setText("Marca");
+        jPanel6.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 190, 20));
+
         tab_admin.addTab("Agregar Carro", jPanel6);
 
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -555,6 +568,11 @@ public class main extends javax.swing.JFrame implements Serializable {
         jPanel7.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 143, -1));
 
         bt_agregarcircuito.setText("Agregar");
+        bt_agregarcircuito.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_agregarcircuitoMouseClicked(evt);
+            }
+        });
         jPanel7.add(bt_agregarcircuito, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, 130, 50));
 
         tab_admin.addTab("Agregar Circuito", jPanel7);
@@ -1098,7 +1116,30 @@ public class main extends javax.swing.JFrame implements Serializable {
     }//GEN-LAST:event_rb_agenciaMouseClicked
 
     private void bt_agregarcarroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregarcarroMouseClicked
-
+        Random r = new Random();
+        String pais=cb_pais.getSelectedItem().toString(), marca=cb_marca.getSelectedItem().toString(),
+                modelo=cb_modelo.getSelectedItem().toString();
+        String type = "";
+        if (rb_agencia.isSelected()) {
+            type = "agencia";
+        } else if (rb_reconstruido.isSelected()) {
+            type = "reconstruido";
+        }
+        int precio = Integer.parseInt(tf_precio.getText()), hp = r.nextInt(1,100), v=r.nextInt(1,100),t=r.nextInt(1,200) ;
+         Date year = new Date(y_year.getYear());
+         Color color = bt_color.getBackground();
+         carro c = new carro(pais, marca, modelo, color, precio, year, type,hp,v,t );
+         AdministrarConcesionaria ac = new AdministrarConcesionaria("./concesionarias.cns");
+         AdministrarCarro abroom = new AdministrarCarro("./carros.car");
+         ac.cargar();
+         abroom.cargar();
+         pos = cb_agregarconc.getSelectedIndex();
+         abroom.getListBroom().add(c);
+         ac.getListC().get(pos).getCarrosventa().add(c);
+         abroom.escribir();
+         ac.escribir();
+         JOptionPane.showMessageDialog(this, "Carro agregado correctamente");
+         
     }//GEN-LAST:event_bt_agregarcarroMouseClicked
 
     private void cb_concesionariacompraItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_concesionariacompraItemStateChanged
@@ -1131,6 +1172,10 @@ public class main extends javax.swing.JFrame implements Serializable {
         } 
 
     }//GEN-LAST:event_tab_adminStateChanged
+
+    private void bt_agregarcircuitoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregarcircuitoMouseClicked
+      
+    }//GEN-LAST:event_bt_agregarcircuitoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1166,7 +1211,7 @@ public class main extends javax.swing.JFrame implements Serializable {
             }
         });
     }
-    
+    int pos;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bt_agregacons;
     private javax.swing.JButton bt_agregarcarro;
@@ -1208,6 +1253,9 @@ public class main extends javax.swing.JFrame implements Serializable {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
