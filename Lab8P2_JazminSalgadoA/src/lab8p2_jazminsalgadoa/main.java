@@ -104,20 +104,22 @@ public class main extends javax.swing.JFrame implements Serializable {
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        tf_cantc = new javax.swing.JTextField();
+        tf_lc = new javax.swing.JTextField();
+        tf_loccir = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         bt_agregarcircuito = new javax.swing.JButton();
+        tf_tipocarrera = new javax.swing.JTextField();
+        jLabel28 = new javax.swing.JLabel();
         pn_menuuser = new javax.swing.JPanel();
         tab_user = new javax.swing.JTabbedPane();
         jPanel4 = new javax.swing.JPanel();
         cb_concesionariacompra = new javax.swing.JComboBox<>();
         bt_comprarcarro = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        l_compra = new javax.swing.JList<>();
         pb_cargarcompra = new javax.swing.JProgressBar();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -429,7 +431,7 @@ public class main extends javax.swing.JFrame implements Serializable {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(79, Short.MAX_VALUE)
+                .addContainerGap(281, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -459,7 +461,7 @@ public class main extends javax.swing.JFrame implements Serializable {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_locc, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
                 .addComponent(bt_agregacons, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(68, 68, 68))
         );
@@ -552,9 +554,9 @@ public class main extends javax.swing.JFrame implements Serializable {
         tab_admin.addTab("Agregar Carro", jPanel6);
 
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel7.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 93, 109, 37));
-        jPanel7.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 38, 109, 37));
-        jPanel7.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 219, 109, 37));
+        jPanel7.add(tf_cantc, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 93, 109, 37));
+        jPanel7.add(tf_lc, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 38, 109, 37));
+        jPanel7.add(tf_loccir, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 219, 109, 37));
 
         jLabel20.setText("Locación");
         jPanel7.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 143, -1));
@@ -572,6 +574,10 @@ public class main extends javax.swing.JFrame implements Serializable {
             }
         });
         jPanel7.add(bt_agregarcircuito, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, 130, 50));
+        jPanel7.add(tf_tipocarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, 109, 37));
+
+        jLabel28.setText("Tipo de carrera");
+        jPanel7.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 143, -1));
 
         tab_admin.addTab("Agregar Circuito", jPanel7);
 
@@ -607,10 +613,15 @@ public class main extends javax.swing.JFrame implements Serializable {
         });
 
         bt_comprarcarro.setText("Comprar");
+        bt_comprarcarro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_comprarcarroMouseClicked(evt);
+            }
+        });
 
-        jList1.setModel(new DefaultListModel<>()
+        l_compra.setModel(new DefaultListModel<>()
         );
-        jScrollPane1.setViewportView(jList1);
+        jScrollPane1.setViewportView(l_compra);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -639,7 +650,7 @@ public class main extends javax.swing.JFrame implements Serializable {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(pb_cargarcompra, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addComponent(pb_cargarcompra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(12, 12, 12)
                 .addComponent(cb_concesionariacompra, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -665,6 +676,11 @@ public class main extends javax.swing.JFrame implements Serializable {
         jScrollPane2.setViewportView(jTable1);
 
         bt_modificar.setText("Agregar Modificacion");
+        bt_modificar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_modificarMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -723,7 +739,7 @@ public class main extends javax.swing.JFrame implements Serializable {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jProgressBar6, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -786,12 +802,12 @@ public class main extends javax.swing.JFrame implements Serializable {
                 .addComponent(pb_circuito, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(71, 71, 71)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addGap(40, 40, 40)
                     .addComponent(cb_carro2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(419, Short.MAX_VALUE)))
+                    .addContainerGap(327, Short.MAX_VALUE)))
         );
 
         tab_user.addTab("Simulación", jPanel3);
@@ -809,8 +825,8 @@ public class main extends javax.swing.JFrame implements Serializable {
             pn_menuuserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pn_menuuserLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tab_user)
-                .addContainerGap())
+                .addComponent(tab_user, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(98, Short.MAX_VALUE))
         );
 
         getContentPane().add(pn_menuuser, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 770, 490));
@@ -897,6 +913,7 @@ public class main extends javax.swing.JFrame implements Serializable {
 
                     pn_menuuser.setVisible(true);
                     pn_iniciarsesion.setVisible(false);
+                    bt_salir.setVisible(false);
 
                 } else {
 
@@ -1170,15 +1187,21 @@ public class main extends javax.swing.JFrame implements Serializable {
         abroom.cargar();
         pos = cb_agregarconc.getSelectedIndex();
         abroom.getListBroom().add(c);
-        ac.getListC().get(pos).getCarrosventa().add(c);
         abroom.escribir();
+        ac.getListC().get(pos).getCarrosventa().add(c);
         ac.escribir();
         JOptionPane.showMessageDialog(this, "Carro agregado correctamente");
 
     }//GEN-LAST:event_bt_agregarcarroMouseClicked
 
     private void cb_concesionariacompraItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_concesionariacompraItemStateChanged
+        if (evt.getStateChange()==1) {
+            AdministrarConcesionaria ac = new AdministrarConcesionaria("./concesionarias.cns");
+            ac.cargar();
+                        DefaultListModel l = (DefaultListModel) l_compra.getModel();
 
+            
+        }
     }//GEN-LAST:event_cb_concesionariacompraItemStateChanged
 
     private void bt_salirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_salirMouseClicked
@@ -1196,6 +1219,8 @@ public class main extends javax.swing.JFrame implements Serializable {
         ad.getListC().add(new concesionaria(cn, cl));
         ad.escribir();
         JOptionPane.showMessageDialog(this, "Concesionaria agregada");
+        tf_locc.setText("");
+        tf_nombrec.setText("");
     }//GEN-LAST:event_bt_agregaconsMouseClicked
 
     private void tab_adminStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_tab_adminStateChanged
@@ -1209,7 +1234,14 @@ public class main extends javax.swing.JFrame implements Serializable {
     }//GEN-LAST:event_tab_adminStateChanged
 
     private void bt_agregarcircuitoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregarcircuitoMouseClicked
+        String loc = tf_loccir.getText(),
+                type = tf_tipocarrera.getText();
+        int longi = Integer.parseInt(tf_lc.getText()),
+                cantv = Integer.parseInt(tf_cantc.getText());
         AdministrarCircuito ac = new AdministrarCircuito("./circuitos.cct");
+        ac.cargar();
+        ac.getListRainbow().add(new circuito(longi, cantv, type, loc));
+        ac.escribir();
     }//GEN-LAST:event_bt_agregarcircuitoMouseClicked
 
     private void tab_userStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_tab_userStateChanged
@@ -1220,6 +1252,14 @@ public class main extends javax.swing.JFrame implements Serializable {
             cb_concesionariacompra.setModel(cb);
         }
     }//GEN-LAST:event_tab_userStateChanged
+
+    private void bt_modificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_modificarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bt_modificarMouseClicked
+
+    private void bt_comprarcarroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_comprarcarroMouseClicked
+        
+    }//GEN-LAST:event_bt_comprarcarroMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1300,6 +1340,7 @@ public class main extends javax.swing.JFrame implements Serializable {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1307,7 +1348,6 @@ public class main extends javax.swing.JFrame implements Serializable {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -1321,9 +1361,7 @@ public class main extends javax.swing.JFrame implements Serializable {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JList<String> l_compra;
     private javax.swing.JList<String> l_eliminar1;
     private javax.swing.JProgressBar pb_buscar;
     private javax.swing.JProgressBar pb_cargarcompra;
@@ -1340,12 +1378,16 @@ public class main extends javax.swing.JFrame implements Serializable {
     private javax.swing.JRadioButton rb_reconstruido;
     private javax.swing.JTabbedPane tab_admin;
     private javax.swing.JTabbedPane tab_user;
+    private javax.swing.JTextField tf_cantc;
     private javax.swing.JTextField tf_correo;
+    private javax.swing.JTextField tf_lc;
     private javax.swing.JTextField tf_locc;
+    private javax.swing.JTextField tf_loccir;
     private javax.swing.JTextField tf_nombrec;
     private javax.swing.JTextField tf_nombredeusuario;
     private javax.swing.JTextField tf_paisdeorigen;
     private javax.swing.JTextField tf_precio;
+    private javax.swing.JTextField tf_tipocarrera;
     private javax.swing.JTextField tf_user;
     private javax.swing.JTextField tf_yearborn;
     private com.toedter.calendar.JYearChooser y_year;
