@@ -15,9 +15,11 @@ public class AdministrarBarra extends Thread {
     private JProgressBar barra;
     private boolean avanzar;
     private boolean vive;
+    private int time;
 
-    public AdministrarBarra(JProgressBar barra) {
+    public AdministrarBarra(JProgressBar barra, int time) {
         this.barra = barra;
+        this.time=time;
         avanzar = true;
         vive = true;
     }
@@ -50,7 +52,7 @@ public class AdministrarBarra extends Thread {
     public void run() {
         while (vive) {
             if (avanzar) {
-                barra.setValue(barra.getValue() + 1);
+                barra.setValue(barra.getValue() + time);
                 if (barra.getValue() == 100000000) {
                     vive = false;
                 }

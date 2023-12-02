@@ -47,19 +47,18 @@ public class main extends javax.swing.JFrame implements Serializable {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel8 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        pb_buscar = new javax.swing.JProgressBar();
         pn_iniciarsesion = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        cb_users = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         pf_iniciosesion = new javax.swing.JPasswordField();
         bt_iniciarsesion = new javax.swing.JButton();
         bt_registrar = new javax.swing.JButton();
         bt_menucarro = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        tf_user = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        pb_buscar = new javax.swing.JProgressBar();
         pn_registro = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -140,35 +139,6 @@ public class main extends javax.swing.JFrame implements Serializable {
         pb_circuito = new javax.swing.JProgressBar();
         jButton2 = new javax.swing.JButton();
 
-        jLabel11.setText("Buscando Usuario");
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 652, Short.MAX_VALUE)
-            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel8Layout.createSequentialGroup()
-                    .addGap(176, 176, 176)
-                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel8Layout.createSequentialGroup()
-                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(pb_buscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGap(176, 176, 176)))
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 227, Short.MAX_VALUE)
-            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel8Layout.createSequentialGroup()
-                    .addGap(84, 84, 84)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(8, 8, 8)
-                    .addComponent(pb_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(84, 84, 84)))
-        );
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -210,13 +180,16 @@ public class main extends javax.swing.JFrame implements Serializable {
 
         jLabel4.setText("O mejor desea: ");
 
+        jLabel11.setText("Buscando Usuario");
+
         javax.swing.GroupLayout pn_iniciarsesionLayout = new javax.swing.GroupLayout(pn_iniciarsesion);
         pn_iniciarsesion.setLayout(pn_iniciarsesionLayout);
         pn_iniciarsesionLayout.setHorizontalGroup(
             pn_iniciarsesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pn_iniciarsesionLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_iniciarsesionLayout.createSequentialGroup()
                 .addGap(248, 248, 248)
                 .addGroup(pn_iniciarsesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(tf_user)
                     .addGroup(pn_iniciarsesionLayout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -228,7 +201,6 @@ public class main extends javax.swing.JFrame implements Serializable {
                         .addComponent(bt_registrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(44, 44, 44)
                         .addComponent(bt_menucarro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(cb_users, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pn_iniciarsesionLayout.createSequentialGroup()
                         .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(183, 183, 183))
@@ -238,7 +210,11 @@ public class main extends javax.swing.JFrame implements Serializable {
                         .addGroup(pn_iniciarsesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(bt_iniciarsesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(101, 101, 101)))
+                        .addGap(101, 101, 101))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pn_iniciarsesionLayout.createSequentialGroup()
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pb_buscar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(272, 272, 272))
         );
         pn_iniciarsesionLayout.setVerticalGroup(
@@ -248,13 +224,17 @@ public class main extends javax.swing.JFrame implements Serializable {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addGap(3, 3, 3)
-                .addComponent(cb_users, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
+                .addGap(18, 18, 18)
+                .addComponent(tf_user, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(pf_iniciosesion, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                .addGap(5, 5, 5)
+                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(8, 8, 8)
+                .addComponent(pb_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bt_iniciarsesion)
                 .addGap(10, 10, 10)
                 .addComponent(jLabel4)
@@ -880,10 +860,7 @@ public class main extends javax.swing.JFrame implements Serializable {
         pn_iniciarsesion.setVisible(true);
         pn_admin.setVisible(false);
         pn_registro.setVisible(false);
-        AdministrarJugador ai = new AdministrarJugador("./users.usr");
-        ai.cargar();
-        DefaultComboBoxModel m = new DefaultComboBoxModel(ai.getListJ().toArray());
-        cb_users.setModel(m);
+
     }//GEN-LAST:event_bt_iniciosesionMouseClicked
 
     private void pf_iniciosesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pf_iniciosesionMouseClicked
@@ -891,9 +868,32 @@ public class main extends javax.swing.JFrame implements Serializable {
     }//GEN-LAST:event_pf_iniciosesionMouseClicked
 
     private void bt_iniciarsesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_iniciarsesionMouseClicked
+        pb_buscar.setValue(0);
+        ab = new AdministrarBarra(pb_buscar, 1);
+        ab.start();
         AdministrarJugador aj = new AdministrarJugador("./users.usr");
         aj.cargar();
-        
+        String user = tf_user.getText(),
+                pswd = pf_iniciosesion.getText();
+        try {
+            for (int i = 0; i < aj.getListJ().size(); i++) {
+                if (aj.getListJ().get(i).getCorreo().equalsIgnoreCase(user) && aj.getListJ()
+                        .get(i).getContraseña().equalsIgnoreCase(pswd)) {
+                    JOptionPane.showMessageDialog(this, "Usuario encontrado, bienvenido!");
+                    ab.sleep(100);
+                    pn_menuuser.setVisible(true);
+                    pn_iniciarsesion.setVisible(false);
+                } else {
+                    
+                    ab = new AdministrarBarra(pb_buscar, 0);
+                    ab.start();
+                    ab.sleep(100);
+                    pb_buscar.setValue(0);
+                }
+            }
+        } catch (Exception e) {
+        }
+        pb_buscar.setValue(0);
     }//GEN-LAST:event_bt_iniciarsesionMouseClicked
 
     private void bt_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_registrarMouseClicked
@@ -1232,6 +1232,7 @@ public class main extends javax.swing.JFrame implements Serializable {
         });
     }
     int pos;
+    AdministrarBarra ab;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bt_agregacons;
     private javax.swing.JButton bt_agregarcarro;
@@ -1254,7 +1255,6 @@ public class main extends javax.swing.JFrame implements Serializable {
     private javax.swing.JComboBox<String> cb_marca;
     private javax.swing.JComboBox<String> cb_modelo;
     private javax.swing.JComboBox<String> cb_pais;
-    private javax.swing.JComboBox<String> cb_users;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1291,7 +1291,6 @@ public class main extends javax.swing.JFrame implements Serializable {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JProgressBar jProgressBar2;
     private javax.swing.JProgressBar jProgressBar5;
     private javax.swing.JProgressBar jProgressBar6;
@@ -1323,6 +1322,7 @@ public class main extends javax.swing.JFrame implements Serializable {
     private javax.swing.JTextField tf_nombredeusuario;
     private javax.swing.JTextField tf_paisdeorigen;
     private javax.swing.JTextField tf_precio;
+    private javax.swing.JTextField tf_user;
     private javax.swing.JTextField tf_yearborn;
     private com.toedter.calendar.JYearChooser y_year;
     // End of variables declaration//GEN-END:variables
