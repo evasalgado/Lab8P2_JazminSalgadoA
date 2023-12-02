@@ -112,13 +112,13 @@ public class main extends javax.swing.JFrame implements Serializable {
         jLabel22 = new javax.swing.JLabel();
         bt_agregarcircuito = new javax.swing.JButton();
         pn_menuuser = new javax.swing.JPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        tab_user = new javax.swing.JTabbedPane();
         jPanel4 = new javax.swing.JPanel();
         cb_concesionariacompra = new javax.swing.JComboBox<>();
         bt_comprarcarro = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
-        jProgressBar2 = new javax.swing.JProgressBar();
+        pb_cargarcompra = new javax.swing.JProgressBar();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -594,6 +594,12 @@ public class main extends javax.swing.JFrame implements Serializable {
 
         getContentPane().add(pn_admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 770, 500));
 
+        tab_user.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                tab_userStateChanged(evt);
+            }
+        });
+
         cb_concesionariacompra.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 cb_concesionariacompraItemStateChanged(evt);
@@ -610,38 +616,40 @@ public class main extends javax.swing.JFrame implements Serializable {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(243, 243, 243)
-                .addComponent(cb_concesionariacompra, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(158, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(bt_comprarcarro, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(250, 250, 250))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(229, 229, 229))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(pb_cargarcompra, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(146, 146, 146))))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(243, 243, 243)
+                        .addComponent(cb_concesionariacompra, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(251, 251, 251)
+                        .addComponent(bt_comprarcarro, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(jProgressBar2, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addComponent(pb_cargarcompra, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
                 .addGap(12, 12, 12)
                 .addComponent(cb_concesionariacompra, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
                 .addComponent(bt_comprarcarro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
+                .addGap(121, 121, 121))
         );
 
-        jTabbedPane1.addTab("Comprar carro", jPanel4);
+        tab_user.addTab("Comprar carro", jPanel4);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -687,7 +695,7 @@ public class main extends javax.swing.JFrame implements Serializable {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Instalar Partes", jPanel5);
+        tab_user.addTab("Instalar Partes", jPanel5);
 
         l_eliminar1.setModel(new DefaultListModel()
         );
@@ -723,7 +731,7 @@ public class main extends javax.swing.JFrame implements Serializable {
                 .addComponent(bt_eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jTabbedPane1.addTab("Vender Carro", jPanel2);
+        tab_user.addTab("Vender Carro", jPanel2);
 
         jLabel12.setText("Carro1");
 
@@ -786,7 +794,7 @@ public class main extends javax.swing.JFrame implements Serializable {
                     .addContainerGap(419, Short.MAX_VALUE)))
         );
 
-        jTabbedPane1.addTab("Simulación", jPanel3);
+        tab_user.addTab("Simulación", jPanel3);
 
         javax.swing.GroupLayout pn_menuuserLayout = new javax.swing.GroupLayout(pn_menuuser);
         pn_menuuser.setLayout(pn_menuuserLayout);
@@ -794,14 +802,14 @@ public class main extends javax.swing.JFrame implements Serializable {
             pn_menuuserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pn_menuuserLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
+                .addComponent(tab_user)
                 .addContainerGap())
         );
         pn_menuuserLayout.setVerticalGroup(
             pn_menuuserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pn_menuuserLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
+                .addComponent(tab_user)
                 .addContainerGap())
         );
 
@@ -860,6 +868,10 @@ public class main extends javax.swing.JFrame implements Serializable {
         pn_iniciarsesion.setVisible(true);
         pn_admin.setVisible(false);
         pn_registro.setVisible(false);
+        AdministrarConcesionaria ac = new AdministrarConcesionaria("./concesionarias.cns");
+        ac.cargar();
+        DefaultComboBoxModel cb = new DefaultComboBoxModel(ac.getListC().toArray());
+        cb_concesionariacompra.setModel(cb);
 
     }//GEN-LAST:event_bt_iniciosesionMouseClicked
 
@@ -872,6 +884,7 @@ public class main extends javax.swing.JFrame implements Serializable {
         ab = new AdministrarBarra(pb_buscar, 1);
         ab.start();
         AdministrarJugador aj = new AdministrarJugador("./users.usr");
+
         aj.cargar();
         String user = tf_user.getText(),
                 pswd = pf_iniciosesion.getText();
@@ -881,10 +894,12 @@ public class main extends javax.swing.JFrame implements Serializable {
                         .get(i).getContraseña().equalsIgnoreCase(pswd)) {
                     JOptionPane.showMessageDialog(this, "Usuario encontrado, bienvenido!");
                     ab.sleep(100);
+
                     pn_menuuser.setVisible(true);
                     pn_iniciarsesion.setVisible(false);
+
                 } else {
-                    
+
                     ab = new AdministrarBarra(pb_buscar, 0);
                     ab.start();
                     ab.sleep(100);
@@ -1197,6 +1212,15 @@ public class main extends javax.swing.JFrame implements Serializable {
         AdministrarCircuito ac = new AdministrarCircuito("./circuitos.cct");
     }//GEN-LAST:event_bt_agregarcircuitoMouseClicked
 
+    private void tab_userStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_tab_userStateChanged
+        if (tab_user.getSelectedIndex() == 0) {
+            AdministrarConcesionaria ac = new AdministrarConcesionaria("./concesionarias.cns");
+            ac.cargar();
+            DefaultComboBoxModel cb = new DefaultComboBoxModel(ac.getListC().toArray());
+            cb_concesionariacompra.setModel(cb);
+        }
+    }//GEN-LAST:event_tab_userStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -1291,19 +1315,18 @@ public class main extends javax.swing.JFrame implements Serializable {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JProgressBar jProgressBar2;
     private javax.swing.JProgressBar jProgressBar5;
     private javax.swing.JProgressBar jProgressBar6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JList<String> l_eliminar1;
     private javax.swing.JProgressBar pb_buscar;
+    private javax.swing.JProgressBar pb_cargarcompra;
     private javax.swing.JProgressBar pb_circuito;
     private javax.swing.JProgressBar pb_progress1;
     private javax.swing.JProgressBar pb_progress2;
@@ -1316,6 +1339,7 @@ public class main extends javax.swing.JFrame implements Serializable {
     private javax.swing.JRadioButton rb_agencia;
     private javax.swing.JRadioButton rb_reconstruido;
     private javax.swing.JTabbedPane tab_admin;
+    private javax.swing.JTabbedPane tab_user;
     private javax.swing.JTextField tf_correo;
     private javax.swing.JTextField tf_locc;
     private javax.swing.JTextField tf_nombrec;
