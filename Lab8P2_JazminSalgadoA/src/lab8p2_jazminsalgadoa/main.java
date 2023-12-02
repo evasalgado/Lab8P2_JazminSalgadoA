@@ -47,6 +47,9 @@ public class main extends javax.swing.JFrame implements Serializable {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel8 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        pb_buscar = new javax.swing.JProgressBar();
         pn_iniciarsesion = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -57,8 +60,6 @@ public class main extends javax.swing.JFrame implements Serializable {
         bt_registrar = new javax.swing.JButton();
         bt_menucarro = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jProgressBar1 = new javax.swing.JProgressBar();
-        jLabel11 = new javax.swing.JLabel();
         pn_registro = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -139,6 +140,35 @@ public class main extends javax.swing.JFrame implements Serializable {
         pb_circuito = new javax.swing.JProgressBar();
         jButton2 = new javax.swing.JButton();
 
+        jLabel11.setText("Buscando Usuario");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 652, Short.MAX_VALUE)
+            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel8Layout.createSequentialGroup()
+                    .addGap(176, 176, 176)
+                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel8Layout.createSequentialGroup()
+                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(pb_buscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGap(176, 176, 176)))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 227, Short.MAX_VALUE)
+            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel8Layout.createSequentialGroup()
+                    .addGap(84, 84, 84)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(8, 8, 8)
+                    .addComponent(pb_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(84, 84, 84)))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -180,44 +210,36 @@ public class main extends javax.swing.JFrame implements Serializable {
 
         jLabel4.setText("O mejor desea: ");
 
-        jLabel11.setText("Buscando Usuario");
-
         javax.swing.GroupLayout pn_iniciarsesionLayout = new javax.swing.GroupLayout(pn_iniciarsesion);
         pn_iniciarsesion.setLayout(pn_iniciarsesionLayout);
         pn_iniciarsesionLayout.setHorizontalGroup(
             pn_iniciarsesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pn_iniciarsesionLayout.createSequentialGroup()
                 .addGap(248, 248, 248)
-                .addGroup(pn_iniciarsesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pn_iniciarsesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(pn_iniciarsesionLayout.createSequentialGroup()
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(25, 25, 25))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pn_iniciarsesionLayout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(183, 183, 183))
                     .addGroup(pn_iniciarsesionLayout.createSequentialGroup()
+                        .addComponent(bt_registrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(44, 44, 44)
+                        .addComponent(bt_menucarro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(cb_users, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pn_iniciarsesionLayout.createSequentialGroup()
+                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(183, 183, 183))
+                    .addComponent(pf_iniciosesion, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pn_iniciarsesionLayout.createSequentialGroup()
+                        .addGap(99, 99, 99)
                         .addGroup(pn_iniciarsesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(pn_iniciarsesionLayout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(25, 25, 25))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pn_iniciarsesionLayout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(183, 183, 183))
-                            .addGroup(pn_iniciarsesionLayout.createSequentialGroup()
-                                .addComponent(bt_registrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(44, 44, 44)
-                                .addComponent(bt_menucarro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(cb_users, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pn_iniciarsesionLayout.createSequentialGroup()
-                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(183, 183, 183))
-                            .addComponent(pf_iniciosesion, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pn_iniciarsesionLayout.createSequentialGroup()
-                                .addGap(99, 99, 99)
-                                .addGroup(pn_iniciarsesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(bt_iniciarsesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(101, 101, 101)))
-                        .addGap(272, 272, 272))))
+                            .addComponent(bt_iniciarsesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(101, 101, 101)))
+                .addGap(272, 272, 272))
         );
         pn_iniciarsesionLayout.setVerticalGroup(
             pn_iniciarsesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -232,11 +254,7 @@ public class main extends javax.swing.JFrame implements Serializable {
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(pf_iniciosesion, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(8, 8, 8)
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
                 .addComponent(bt_iniciarsesion)
                 .addGap(10, 10, 10)
                 .addComponent(jLabel4)
@@ -829,7 +847,7 @@ public class main extends javax.swing.JFrame implements Serializable {
         } catch (ParseException ex) {
             Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
         }
-        AdministrarInicioSesion ai = new AdministrarInicioSesion("./users.usr");
+        AdministrarJugador ai = new AdministrarJugador("./users.usr");
         ai.cargar();
         ai.getListJ().add(new jugador(user, mail, pais, d, pswrd, 100000));
         ai.escribir();
@@ -839,8 +857,6 @@ public class main extends javax.swing.JFrame implements Serializable {
         tf_paisdeorigen.setText("");
         pf_pswdregistro.setText("******");
         tf_yearborn.setText("");
-        pn_registro.setVisible(false);
-        pn_iniciarsesion.setVisible(false);
     }//GEN-LAST:event_bt_registrarseMouseClicked
 
     private void bt_menucarro1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_menucarro1MouseClicked
@@ -864,7 +880,7 @@ public class main extends javax.swing.JFrame implements Serializable {
         pn_iniciarsesion.setVisible(true);
         pn_admin.setVisible(false);
         pn_registro.setVisible(false);
-        AdministrarInicioSesion ai = new AdministrarInicioSesion("./users.usr");
+        AdministrarJugador ai = new AdministrarJugador("./users.usr");
         ai.cargar();
         DefaultComboBoxModel m = new DefaultComboBoxModel(ai.getListJ().toArray());
         cb_users.setModel(m);
@@ -875,10 +891,14 @@ public class main extends javax.swing.JFrame implements Serializable {
     }//GEN-LAST:event_pf_iniciosesionMouseClicked
 
     private void bt_iniciarsesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_iniciarsesionMouseClicked
-
+        AdministrarJugador aj = new AdministrarJugador("./users.usr");
+        aj.cargar();
+        
     }//GEN-LAST:event_bt_iniciarsesionMouseClicked
 
     private void bt_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_registrarMouseClicked
+        pn_registro.setVisible(true);
+        pn_iniciarsesion.setVisible(false);
 
     }//GEN-LAST:event_bt_registrarMouseClicked
 
@@ -1117,29 +1137,29 @@ public class main extends javax.swing.JFrame implements Serializable {
 
     private void bt_agregarcarroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregarcarroMouseClicked
         Random r = new Random();
-        String pais=cb_pais.getSelectedItem().toString(), marca=cb_marca.getSelectedItem().toString(),
-                modelo=cb_modelo.getSelectedItem().toString();
+        String pais = cb_pais.getSelectedItem().toString(), marca = cb_marca.getSelectedItem().toString(),
+                modelo = cb_modelo.getSelectedItem().toString();
         String type = "";
         if (rb_agencia.isSelected()) {
             type = "agencia";
         } else if (rb_reconstruido.isSelected()) {
             type = "reconstruido";
         }
-        int precio = Integer.parseInt(tf_precio.getText()), hp = r.nextInt(1,100), v=r.nextInt(1,100),t=r.nextInt(1,200) ;
-         Date year = new Date(y_year.getYear());
-         Color color = bt_color.getBackground();
-         carro c = new carro(pais, marca, modelo, color, precio, year, type,hp,v,t );
-         AdministrarConcesionaria ac = new AdministrarConcesionaria("./concesionarias.cns");
-         AdministrarCarro abroom = new AdministrarCarro("./carros.car");
-         ac.cargar();
-         abroom.cargar();
-         pos = cb_agregarconc.getSelectedIndex();
-         abroom.getListBroom().add(c);
-         ac.getListC().get(pos).getCarrosventa().add(c);
-         abroom.escribir();
-         ac.escribir();
-         JOptionPane.showMessageDialog(this, "Carro agregado correctamente");
-         
+        int precio = Integer.parseInt(tf_precio.getText()), hp = r.nextInt(1, 100), v = r.nextInt(1, 100), t = r.nextInt(1, 200);
+        Date year = new Date(y_year.getYear());
+        Color color = bt_color.getBackground();
+        carro c = new carro(pais, marca, modelo, color, precio, year, type, hp, v, t);
+        AdministrarConcesionaria ac = new AdministrarConcesionaria("./concesionarias.cns");
+        AdministrarCarro abroom = new AdministrarCarro("./carros.car");
+        ac.cargar();
+        abroom.cargar();
+        pos = cb_agregarconc.getSelectedIndex();
+        abroom.getListBroom().add(c);
+        ac.getListC().get(pos).getCarrosventa().add(c);
+        abroom.escribir();
+        ac.escribir();
+        JOptionPane.showMessageDialog(this, "Carro agregado correctamente");
+
     }//GEN-LAST:event_bt_agregarcarroMouseClicked
 
     private void cb_concesionariacompraItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_concesionariacompraItemStateChanged
@@ -1169,12 +1189,12 @@ public class main extends javax.swing.JFrame implements Serializable {
             ac.cargar();
             DefaultComboBoxModel mc = new DefaultComboBoxModel(ac.getListC().toArray());
             cb_agregarconc.setModel(mc);
-        } 
+        }
 
     }//GEN-LAST:event_tab_adminStateChanged
 
     private void bt_agregarcircuitoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregarcircuitoMouseClicked
-      
+        AdministrarCircuito ac = new AdministrarCircuito("./circuitos.cct");
     }//GEN-LAST:event_bt_agregarcircuitoMouseClicked
 
     /**
@@ -1271,7 +1291,7 @@ public class main extends javax.swing.JFrame implements Serializable {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JProgressBar jProgressBar2;
     private javax.swing.JProgressBar jProgressBar5;
     private javax.swing.JProgressBar jProgressBar6;
@@ -1284,6 +1304,7 @@ public class main extends javax.swing.JFrame implements Serializable {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JList<String> l_eliminar1;
+    private javax.swing.JProgressBar pb_buscar;
     private javax.swing.JProgressBar pb_circuito;
     private javax.swing.JProgressBar pb_progress1;
     private javax.swing.JProgressBar pb_progress2;
